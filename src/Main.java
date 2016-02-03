@@ -112,14 +112,15 @@ public class Main {
 			types.put(temp[0], temp[2]);
 		    }//if
 		    else {
-			String edge += temp[0] + ',' + temp[1] + ',' + temp[2];
+			String edge = temp[0] + ',' + temp[1] + ',' + temp[2];
 			if (degrees.get(temp[0]) == null) degrees.put(temp[0], (long)1);
 			else degrees.put(temp[0], degrees.get(temp[0]).longValue()+(long)1);
 			if (degrees.get(temp[2]) == null) degrees.put(temp[2], (long)1);
 			else degrees.put(temp[2], degrees.get(temp[2]).longValue()+(long)1);
 			if (edges.get(edge) == null) {
 			    edges.put(edge, (long)1);
-			    s += edge + '\n';			}//if
+			    s += edge + '\n';
+			}//if
 			else edges.put(edge, edges.get(edge).longValue()+(long)1);
 		    }//else
 		}//if
@@ -128,15 +129,23 @@ public class Main {
 			if (temp[3].equals("type")) {
 			    types.put(temp[2], temp[4]);
 			}//if
-			else if (temp.length == 4) s += temp[2] + ',' + temp[3] + ',' + temp[2] + '\n';
 			else {
-			    s += temp[2] + ',' + temp[3] + ',' + temp[4] + '\n';
-			    if (degrees.get(temp[2]) == null) degrees.put(temp[2], (long)1);
-			    else degrees.put(temp[2], degrees.get(temp[2]).longValue()+(long)1);
-			    if (temp.length > 4) {
-				if (degrees.get(temp[4]) == null) degrees.put(temp[4], (long)1);
-				else degrees.put(temp[4], degrees.get(temp[4]).longValue()+(long)1);
+			    String edge = "";
+			    if (temp.length == 4) edge += temp[2] + ',' + temp[3] + ',' + temp[2];
+			    else {
+				edge += temp[2] + ',' + temp[3] + ',' + temp[4];
+				if (degrees.get(temp[2]) == null) degrees.put(temp[2], (long)1);
+				else degrees.put(temp[2], degrees.get(temp[2]).longValue()+(long)1);
+				if (temp.length > 4) {
+				    if (degrees.get(temp[4]) == null) degrees.put(temp[4], (long)1);
+				    else degrees.put(temp[4], degrees.get(temp[4]).longValue()+(long)1);
+				}//if
+			    }//else
+			    if (edges.get(edge) == null) {
+				edges.put(edge, (long)1);
+				s += edge + '\n';
 			    }//if
+			    else edges.put(edge, edges.get(edge).longValue()+(long)1);
 			}//else
 		    }//if
 		}//if
@@ -154,16 +163,20 @@ public class Main {
 	    FileWriter fw2 = new FileWriter(file_write2.getAbsoluteFile());
 	    BufferedWriter bw2 = new BufferedWriter(fw2);
 	    BufferedReader bufferedReader2 = new BufferedReader(fileReader2);
-	    bw2.write("node,attribute,degree,edge,target,attribute,degree\n");
+	    bw2.write("node,attribute,degree,edge,edge_degree,target,attribute,degree\n");
 	    //int count = 0;
 	    //HashMap<String, String> types = new HashMap();
 	    while ((line = bufferedReader2.readLine()) != null) {
 		String[] temp = line.split(",");
+		System.out.println(line + ' ' + temp.length);
 		if (degrees.get(temp[0]).longValue() >= DEGREE_THRESHOLD && degrees.get(temp[2]).longValue() >= DEGREE_THRESHOLD) {
 		    String s = temp[0] + ',';
 		    s += types.get(temp[0]) +',';
 		    s += degrees.get(temp[0]).toString() + ',';
 		    s += temp[1] + ',';
+		    String edge = temp[0] + ',' + temp[1] + ',' + temp[2];
+		    System.out.println(edge);
+		    s += edges.get(edge).toString() + ',';
 		    s += temp[2] + ',';
 		    if (types.containsKey(temp[2])) s += types.get(temp[2]) + ',';
 		    else s += temp[1].replace("has", "") +',';

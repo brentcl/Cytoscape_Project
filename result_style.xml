@@ -128,7 +128,7 @@
 <visualProperty name="NODE_SIZE">
 <continuousMapping attributeType="long" attributeName="degree">
 <continuousMappingPoint lesserValue="50.0" greaterValue="50.0" equalValue="50.0" attrValue="1.0"/>
-<continuousMappingPoint lesserValue="750.0" greaterValue="750.0" equalValue="750.0" attrValue="48275"/>
+<continuousMappingPoint lesserValue="750.0" greaterValue="750.0" equalValue="750.0" attrValue="48273"/>
 </continuousMapping>
 </visualProperty>
 </node></visualStyle>

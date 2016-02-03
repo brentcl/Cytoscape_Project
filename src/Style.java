@@ -65,14 +65,14 @@ public class Style {
 		    //System.out.println(s);
 		}//if
 		if (temp.length > 3) {
-		    s = temp[5];
+		    s = temp[6];
 		    if (!types.contains(s)) {
 			types.add(s);
 			//System.out.println(s);
 		    }//if
 		}//if
 		if (Long.parseLong(temp[2]) > max) max = Long.parseLong(temp[2]);
-		if (Long.parseLong(temp[6]) > max) max = Long.parseLong(temp[6]);
+		if (Long.parseLong(temp[7]) > max) max = Long.parseLong(temp[7]);
 		//bw.write(s  + "\n");
 		//System.out.println(s  + "\n");
 	    }//while
