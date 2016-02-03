@@ -1,0 +1,4 @@
+Remove: hasDbXref, hasNameSpace, label, comment, chromosomalPosition, hasCommonName, hasEndLocation, hasFASTAFormat, hasFullName, hasIdentifier, hasMutationAA, hasMutationId, hasOtherName, hasProteinStructure, hasScientificName, hasSequence, hasStartLocation, hasTopologicalDomainType, hasUniprotPrimaryName,hasUniprotSynonymName, hasURI,isPrimaryUniprotId, locatedIn, occursIn,subClassOf, hasMutationImpact
+Genes: Human_EGFR
+Threshold: 20
+Max Size: 750.0

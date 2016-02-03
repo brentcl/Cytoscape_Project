@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<vizmap documentVersion="3.0" id="VizMap-2016_01_19-18_47">
+<visualStyle name="result_style">
+<network>
+<visualProperty name="NETWORK_CENTER_X_LOCATION" default="0.0"/>
+<visualProperty name="NETWORK_SCALE_FACTOR" default="1.0"/>
+<visualProperty name="NETWORK_BACKGROUND_PAINT" default="#FFFFFF"/>
+<visualProperty name="NETWORK_CENTER_Y_LOCATION" default="0.0"/>
+<visualProperty name="NETWORK_WIDTH" default="550.0"/>
+<visualProperty name="NETWORK_CENTER_Z_LOCATION" default="0.0"/>
+<visualProperty name="NETWORK_DEPTH" default="0.0"/>
+<visualProperty name="NETWORK_NODE_SELECTION" default="true"/>
+<visualProperty name="NETWORK_EDGE_SELECTION" default="true"/>
+<visualProperty name="NETWORK_TITLE" default=""/>
+<visualProperty name="NETWORK_HEIGHT" default="400.0"/>
+</network>
+<edge>
+<visualProperty name="EDGE_LABEL" default=""/>
+<visualProperty name="EDGE_TRANSPARENCY" default="255"/>
+<visualProperty name="EDGE_SELECTED" default="false"/>
+<visualProperty name="EDGE_TARGET_ARROW_SHAPE" default="NONE"/>
+<visualProperty name="EDGE_UNSELECTED_PAINT" default="#404040"/>
+<visualProperty name="EDGE_VISIBLE" default="true"/>
+<visualProperty name="EDGE_TARGET_ARROW_SELECTED_PAINT" default="#FFFF00"/>
+<visualProperty name="EDGE_SOURCE_ARROW_UNSELECTED_PAINT" default="#000000"/>
+<visualProperty name="EDGE_LABEL_FONT_FACE" default="Dialog.plain,plain,10"/>
+<visualProperty name="EDGE_LABEL_FONT_SIZE" default="10"/>
+<visualProperty name="EDGE_TOOLTIP" default=""/>
+<visualProperty name="EDGE_WIDTH" default="2.0"/>
+<visualProperty name="EDGE_CURVED" default="true"/>
+<visualProperty name="EDGE_LABEL_COLOR" default="#000000"/>
+<visualProperty name="EDGE_SOURCE_ARROW_SHAPE" default="NONE"/>
+<visualProperty name="EDGE_LABEL_WIDTH" default="200.0"/>
+<visualProperty name="EDGE_STROKE_SELECTED_PAINT" default="#FF0000"/>
+<visualProperty name="EDGE_SELECTED_PAINT" default="#FF0000"/>
+ <visualProperty name="EDGE_BEND" default=""/>
+<visualProperty name="EDGE_LABEL_TRANSPARENCY" default="255"/>
+<visualProperty name="EDGE_STROKE_UNSELECTED_PAINT" default="#848484"/>
+<visualProperty name="EDGE_LINE_TYPE" default="SOLID"/>
+<visualProperty name="EDGE_PAINT" default="#323232"/>
+<visualProperty name="EDGE_TARGET_ARROW_UNSELECTED_PAINT" default="#000000"/>
+<visualProperty name="EDGE_SOURCE_ARROW_SELECTED_PAINT" default="#FFFF00"/>
+</edge>
+<node>
+<dependency name="nodeCustomGraphicsSizeSync" value="true"/>
+<dependency name="nodeSizeLocked" value="true"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_5" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+<visualProperty name="NODE_LABEL_FONT_FACE" default="SansSerif.plain,plain,12"/>
+<visualProperty name="NODE_LABEL_COLOR" default="#000000"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_4" default="C,C,c,0.00,0.00"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_9" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_6" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_6" default="C,C,c,0.00,0.00"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_1" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_8" default="0.0"/>
+<visualProperty name="NODE_DEPTH" default="0.0"/>
+<visualProperty name="NODE_Z_LOCATION" default="0.0"/>
+<visualProperty name="NODE_NESTED_NETWORK_IMAGE_VISIBLE" default="true"/>
+<visualProperty name="NODE_BORDER_TRANSPARENCY" default="255"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_6" default="0.0"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_3" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+<visualProperty name="COMPOUND_NODE_PADDING" default="10.0"/>
+<visualProperty name="NODE_LABEL_TRANSPARENCY" default="255"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_2" default="0.0"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_1" default="C,C,c,0.00,0.00"/>
+<visualProperty name="NODE_LABEL_WIDTH" default="200.0"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_2" default="C,C,c,0.00,0.00"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_1" default="0.0"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_3" default="C,C,c,0.00,0.00"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_7" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+<visualProperty name="NODE_HEIGHT" default="40.0"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_8" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+<visualProperty name="NODE_LABEL_FONT_SIZE" default="12"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_5" default="0.0"/>
+<visualProperty name="NODE_BORDER_STROKE" default="SOLID"/>
+<visualProperty name="NODE_SELECTED_PAINT" default="#FFFF00"/>
+<visualProperty name="NODE_BORDER_PAINT" default="#000000"/>
+<visualProperty name="NODE_VISIBLE" default="true"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_4" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_4" default="0.0"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_7" default="C,C,c,0.00,0.00"/>
+<visualProperty name="NODE_TOOLTIP" default=""/>
+<visualProperty name="NODE_BORDER_WIDTH" default="2.0"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_5" default="C,C,c,0.00,0.00"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_3" default="0.0"/>
+<visualProperty name="COMPOUND_NODE_SHAPE" default="ROUND_RECTANGLE"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_7" default="0.0"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_8" default="C,C,c,0.00,0.00"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_9" default="C,C,c,0.00,0.00"/>
+<visualProperty name="NODE_WIDTH" default="60.0"/>
+<visualProperty name="NODE_TRANSPARENCY" default="135"/>
+<visualProperty name="NODE_X_LOCATION" default="0.0"/>
+<visualProperty name="NODE_SHAPE" default="ELLIPSE"/>
+<visualProperty name="NODE_SELECTED" default="false"/>
+<visualProperty name="NODE_LABEL_POSITION" default="C,C,c,0.00,0.00"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_9" default="0.0"/>
+<visualProperty name="NODE_Y_LOCATION" default="0.0"/>
+<visualProperty name="NODE_CUSTOMGRAPHICS_2" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+<visualProperty name="NODE_LABEL" default="">
+<passthroughMapping attributeType="string" attributeName="name"/></visualProperty><visualProperty name="NODE_FILL_COLOR" default="#C80000"><discreteMapping attributeType="string" attributeName="attribute">
+<discreteMappingEntry value="#ff001a" attributeValue="Gene"/>
+<discreteMappingEntry value="#660029" attributeValue="Missense"/>
+<discreteMappingEntry value="#990082" attributeValue="CodingSilent"/>
+<discreteMappingEntry value="#8000ff" attributeValue="DeletionInframe"/>
+<discreteMappingEntry value="#0066ff" attributeValue="InsertionInframe"/>
+<discreteMappingEntry value="#005c99" attributeValue="ComplexDeletionInframe"/>
+<discreteMappingEntry value="#005766" attributeValue="ComplexInsertionInframe"/>
+<discreteMappingEntry value="#00cc99" attributeValue="Nonsense"/>
+<discreteMappingEntry value="#006605" attributeValue="OtherMutation"/>
+<discreteMappingEntry value="#4c9900" attributeValue="MutantType"/>
+<discreteMappingEntry value="#ccb800" attributeValue="MutationDescription"/>
+<discreteMappingEntry value="#ff8c00" attributeValue="MutationZygosity"/>
+<discreteMappingEntry value="#993600" attributeValue="PKAEndLocation"/>
+<discreteMappingEntry value="#660014" attributeValue="PKAResidue"/>
+<discreteMappingEntry value="#ff008c" attributeValue="PKAStartLocation"/>
+<discreteMappingEntry value="#ff00f2" attributeValue="WildTypeResidue"/>
+<discreteMappingEntry value="#0f0099" attributeValue="Cancer"/>
+<discreteMappingEntry value="#003d99" attributeValue="DeletionFrameshift"/>
+<discreteMappingEntry value="#00b3ff" attributeValue="InsertionFrameshift"/>
+<discreteMappingEntry value="#008a99" attributeValue="CompoundSubstitution"/>
+<discreteMappingEntry value="#00664d" attributeValue="Pathway"/>
+<discreteMappingEntry value="#a6ff00" attributeValue="Sequence"/>
+<discreteMappingEntry value="#998200" attributeValue="HistologySubType"/>
+<discreteMappingEntry value="#995400" attributeValue="PrimaryHistology"/>
+<discreteMappingEntry value="#661a00" attributeValue="ComplexFrameshift"/>
+</discreteMapping>
+</visualProperty>
+<visualProperty name="NODE_SIZE">
+<continuousMapping attributeType="long" attributeName="degree">
+<continuousMappingPoint lesserValue="50.0" greaterValue="50.0" equalValue="50.0" attrValue="1.0"/>
+<continuousMappingPoint lesserValue="750.0" greaterValue="750.0" equalValue="750.0" attrValue="48275"/>
+</continuousMapping>
+</visualProperty>
+</node></visualStyle>
+</vizmap>
