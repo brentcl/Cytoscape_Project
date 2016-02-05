@@ -7,9 +7,101 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Arrays;
+import java.util.Queue;
+import java.util.LinkedList;
 
 public class Main {
 
+    private static class Node {
+
+	private String name;
+	private String parent;
+	private long degree;
+	private String attribute;
+	private ArrayList<String> sourceOfChildren = new ArrayList<String>();
+	private HashMap<String, String> sourceOfEdges = new HashMap<String, String>();
+	private ArrayList<String> targetOfChildren = new ArrayList<String>();
+	private HashMap<String, String> targetOfEdges = new HashMap<String, String>();
+	private boolean visited = false;
+
+	Node(String name, String attribute, long degree) {
+	    this.name = name;
+	    this.degree = degree;
+	    this.attribute = attribute;
+	}//Node
+
+	private void setParent(String parent) {
+	    this.parent = parent;
+	}//setParent
+
+	private void addSourceOfChild(String child, String edge) {
+	    sourceOfChildren.add(child);
+	    sourceOfEdges.put(child, edge);
+	}//addChild
+
+	private void addTargetOfChild(String child, String edge) {
+	    targetOfChildren.add(child);
+	    targetOfEdges.put(child, edge);
+	}//addChild
+
+	private String edgeToString(Node nd, HashMap<String, Long> edges) {
+	    String line;
+	    if (sourceOfChildren.contains(nd.name)) {
+		line = name + ',' + attribute + ',' + Long.toString(degree) + ',' + sourceOfEdges.get(nd.name) + ',';
+		String temp = name + ',' + sourceOfEdges.get(nd.name) + ',' + nd.name;
+		line += edges.get(temp).toString() + ',' + nd.name + ',' + nd.attribute + ',' + Long.toString(nd.degree) + '\n';
+	    }//if
+	    else {
+		line = nd.name + ',' + nd.attribute + ',' + Long.toString(nd.degree) + ',' + targetOfEdges.get(nd.name) + ',';
+		String temp = nd.name + ',' + targetOfEdges.get(nd.name) + ',' + name;
+		line += edges.get(temp).toString() + ',' + name + ',' + attribute + ',' + Long.toString(degree) + '\n';	
+	    }//else
+	    return line;
+	}//edgeToString
+	
+    }//Node
+
+    private static ArrayList<String> bfs(HashMap<String, Node> graph, String start, String target) {
+	Queue<Node> q = new LinkedList<Node>();
+	q.add(graph.get(start));
+	boolean found = false;
+	while (!q.isEmpty()) {
+	    Node temp = q.poll();
+	    if (temp.name.equals(target)) {
+		found = true;
+		break;
+	    }//if
+	    for (int i = 0; i < temp.sourceOfChildren.size(); ++i) {
+		String child = temp.sourceOfChildren.get(i);
+		if (!graph.get(child).visited) {
+		    graph.get(child).visited = true;
+		    graph.get(child).parent = temp.name;
+		    q.add(graph.get(child));
+		}//if
+	    }//for
+	    for (int i = 0; i < temp.targetOfChildren.size(); ++i) {
+		String child = temp.targetOfChildren.get(i);
+		if (!graph.get(child).visited) {
+		    graph.get(child).visited = true;
+		    graph.get(child).parent = temp.name;
+		    q.add(graph.get(child));
+		}//if
+	    }//for
+	}//while
+	if (found) {
+	    ArrayList<String> path = new ArrayList<String>();
+	    String curr = target;
+	    while (!curr.equals(start)) {
+		path.add(0, curr);
+		graph.get(curr).visited = false;
+		curr = graph.get(curr).parent;
+	    }//while
+	    path.add(0, start);
+	    return path;
+	}//if
+	else return null;
+    }//bfs
+    
     public static ArrayList<String> REMOVE = new ArrayList<String>();
     /*= new ArrayList<String> (Arrays.asList("hasDbXref", "hasNameSpace", "label", "comment", "chromosomalPosition", "hasCommonName", "hasEndLocation", "hasFASTAFormat", "hasFullName", "hasIdentifier", "hasMutationAA", "hasMutationId", "hasOtherName", "hasProteinStructure", "hasScientificName", "hasSequence", "hasStartLocation", "hasTopologicalDomainType", "hasUniprotPrimaryName","hasUniprotSynonymName", "hasURI", "isPrimaryUniprotId", "locatedIn", "occursIn","subClassOf", "hasMutationImpact"));
     //public static ArrayList<String> REMOVE = new ArrayList<String>(REMOVE_TEMP);
@@ -17,6 +109,10 @@ public class Main {
     public static ArrayList<String> GENE_LIST = new ArrayList<String>(); //= {"Human_EGFR"};
 
     public static long DEGREE_THRESHOLD;
+
+    public static ArrayList<String> starts = new ArrayList<String>();
+
+    public static ArrayList<String> goals = new ArrayList<String>();
 
     public static void setGeneList(String genes) {
 	genes = genes.replace(" ", "");
@@ -65,6 +161,16 @@ public class Main {
 		break;
 	    case "Max Size":
 		setMax(opt[1]);
+		break;
+	    case "Shortest Path - Start":
+		String temp = bufferedReader.readLine();
+		while (!temp.equals("End")) {
+		    //System.out.println(temp);
+		    String[] nodes = temp.split(" ");
+		    starts.add(nodes[0]);
+		    goals.add(nodes[1]);
+		    temp = bufferedReader.readLine();
+		}//while 
 		break;
 	    default:
 		break;
@@ -163,19 +269,33 @@ public class Main {
 	    FileWriter fw2 = new FileWriter(file_write2.getAbsoluteFile());
 	    BufferedWriter bw2 = new BufferedWriter(fw2);
 	    BufferedReader bufferedReader2 = new BufferedReader(fileReader2);
+	    HashMap<String, Node> graph = new HashMap<String, Node>();
 	    bw2.write("node,attribute,degree,edge,edge_degree,target,attribute,degree\n");
 	    //int count = 0;
 	    //HashMap<String, String> types = new HashMap();
 	    while ((line = bufferedReader2.readLine()) != null) {
 		String[] temp = line.split(",");
-		System.out.println(line + ' ' + temp.length);
+		//System.out.println(line + ' ' + temp.length);
 		if (degrees.get(temp[0]).longValue() >= DEGREE_THRESHOLD && degrees.get(temp[2]).longValue() >= DEGREE_THRESHOLD) {
+		    if (graph.get(temp[0]) == null) {
+			Node nd = new Node(temp[0], types.get(temp[0]), degrees.get(temp[0]).longValue());
+			graph.put(temp[0], nd);
+		    }//if
+		    if (graph.get(temp[2]) == null) {
+			String targetAtt;
+			if (types.containsKey(temp[2])) targetAtt = types.get(temp[2]);
+			else targetAtt = temp[1].replace("has", "");
+			Node nd = new Node(temp[2], targetAtt, degrees.get(temp[2]).longValue());
+			graph.put(temp[2], nd);
+		    }//if
+		    graph.get(temp[0]).addSourceOfChild(temp[2], temp[1]);
+		    graph.get(temp[2]).addTargetOfChild(temp[0], temp[1]);
 		    String s = temp[0] + ',';
 		    s += types.get(temp[0]) +',';
 		    s += degrees.get(temp[0]).toString() + ',';
 		    s += temp[1] + ',';
 		    String edge = temp[0] + ',' + temp[1] + ',' + temp[2];
-		    System.out.println(edge);
+		    //System.out.println(edge);
 		    s += edges.get(edge).toString() + ',';
 		    s += temp[2] + ',';
 		    if (types.containsKey(temp[2])) s += types.get(temp[2]) + ',';
@@ -198,6 +318,27 @@ public class Main {
 		bw3.write(temp);
 	    }//for
 	    bw3.close();
+	    System.out.println("Done");
+	    System.out.println("Finding Shortest Paths...");
+	    File file_write4 = new File("result_shortest_paths.csv");
+	    if (!file_write4.exists()) {
+		file_write4.createNewFile();
+	    }//if
+	    FileWriter fw4 = new FileWriter(file_write4.getAbsoluteFile());
+	    BufferedWriter bw4 = new BufferedWriter(fw4);
+	    bw4.write("node,attribute,degree,edge,edge_degree,target,attribute,degree\n");
+	    for (int i = 0; i < starts.size(); ++i) {
+		ArrayList<String> path = bfs(graph, starts.get(i), goals.get(i));
+		if (path == null) {
+		    System.out.println("No path found between " + starts.get(i) + " and " + goals.get(i));
+		    continue;
+		}//if
+		for (int j = 0; j < path.size()-1; ++j) {
+		    String temp = graph.get(path.get(j)).edgeToString(graph.get(path.get(j+1)), edges);
+		    bw4.write(temp);
+		}//for
+	    }//for
+	    bw4.close();
 	    System.out.println("Done");
 	    System.out.println("Styling...");
 	    Style.style();

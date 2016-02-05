@@ -2,3 +2,7 @@ Remove: hasDbXref, hasNameSpace, label, comment, chromosomalPosition, hasCommonN
 Genes: Human_EGFR
 Threshold: 20
 Max Size: 750.0
+Shortest Path - Start:
+Human_BRAF K
+Human_BRAF Human_EGFR
+End

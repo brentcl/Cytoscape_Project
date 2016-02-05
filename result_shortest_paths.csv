@@ -1,0 +1,7 @@
+node,attribute,degree,edge,edge_degree,target,attribute,degree
+Human_BRAF,Gene,35797,hasMutation,22,Mutation-4384239,Missense,30
+Mutation-4384239,Missense,30,hasWildTypeResidue,1,K,MutantType,99
+Human_BRAF,Gene,35797,hasMutation,22,Mutation-4384239,Missense,30
+Mutation-4384239,Missense,30,hasWildTypeResidue,1,K,MutantType,99
+Mutation-1568917,CodingSilent,30,hasWildTypeResidue,1,K,MutantType,99
+Human_EGFR,Gene,11713,hasMutation,21,Mutation-1568917,CodingSilent,30

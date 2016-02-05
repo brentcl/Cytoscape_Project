@@ -26,7 +26,6 @@
 <visualProperty name="EDGE_LABEL_FONT_FACE" default="Dialog.plain,plain,10"/>
 <visualProperty name="EDGE_LABEL_FONT_SIZE" default="10"/>
 <visualProperty name="EDGE_TOOLTIP" default=""/>
-<visualProperty name="EDGE_WIDTH" default="2.0"/>
 <visualProperty name="EDGE_CURVED" default="true"/>
 <visualProperty name="EDGE_LABEL_COLOR" default="#000000"/>
 <visualProperty name="EDGE_SOURCE_ARROW_SHAPE" default="NONE"/>
@@ -40,6 +39,12 @@
 <visualProperty name="EDGE_PAINT" default="#323232"/>
 <visualProperty name="EDGE_TARGET_ARROW_UNSELECTED_PAINT" default="#000000"/>
 <visualProperty name="EDGE_SOURCE_ARROW_SELECTED_PAINT" default="#FFFF00"/>
+<visualProperty name="EDGE_WIDTH" default="2.0">
+<continuousMapping attributeType="long" attributeName="edge_degree">
+<continuousMappingPoint lesserValue="2.0" greaterValue="2.0" equalValue="2.0" attrValue="1.0"/>
+<continuousMappingPoint lesserValue="30.0" greaterValue="30.0" equalValue="30.0" attrValue="24509"/>
+</continuousMapping>
+</visualProperty>
 </edge>
 <node>
 <dependency name="nodeCustomGraphicsSizeSync" value="true"/>
