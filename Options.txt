@@ -1,8 +1,9 @@
-Remove: hasDbXref, hasNameSpace, label, comment, chromosomalPosition, hasCommonName, hasEndLocation, hasFASTAFormat, hasFullName, hasIdentifier, hasMutationAA, hasMutationId, hasOtherName, hasProteinStructure, hasScientificName, hasSequence, hasStartLocation, hasTopologicalDomainType, hasUniprotPrimaryName,hasUniprotSynonymName, hasURI,isPrimaryUniprotId, locatedIn, occursIn,subClassOf, hasMutationImpact
+Remove: hasDbXref, hasNameSpace, label, comment, chromosomalPosition, hasCommonName, hasEndLocation, hasFASTAFormat, hasFullName, hasIdentifier, hasMutationAA, hasMutationId, hasOtherName, hasProteinStructure, hasScientificName, hasSequence, hasStartLocation, hasTopologicalDomainType, hasUniprotPrimaryName,hasUniprotSynonymName, hasURI,isPrimaryUniprotId, locatedIn, occursIn, subClassOf, hasMutationImpact, inSample
 Genes: Human_EGFR
-Threshold: 20
+Threshold: 2
 Max Size: 750.0
 Shortest Path - Start:
 Human_BRAF K
 Human_BRAF Human_EGFR
+Human_BRAF V
 End

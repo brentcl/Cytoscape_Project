@@ -63,6 +63,7 @@ public class Main {
 
     private static ArrayList<String> bfs(HashMap<String, Node> graph, String start, String target) {
 	Queue<Node> q = new LinkedList<Node>();
+	ArrayList<Node> visited = new ArrayList<Node>();
 	q.add(graph.get(start));
 	boolean found = false;
 	while (!q.isEmpty()) {
@@ -74,6 +75,7 @@ public class Main {
 	    for (int i = 0; i < temp.sourceOfChildren.size(); ++i) {
 		String child = temp.sourceOfChildren.get(i);
 		if (!graph.get(child).visited) {
+		    visited.add(graph.get(child));
 		    graph.get(child).visited = true;
 		    graph.get(child).parent = temp.name;
 		    q.add(graph.get(child));
@@ -82,18 +84,20 @@ public class Main {
 	    for (int i = 0; i < temp.targetOfChildren.size(); ++i) {
 		String child = temp.targetOfChildren.get(i);
 		if (!graph.get(child).visited) {
+		    visited.add(graph.get(child));
 		    graph.get(child).visited = true;
 		    graph.get(child).parent = temp.name;
 		    q.add(graph.get(child));
 		}//if
 	    }//for
 	}//while
+	for (Node nd : visited) nd.visited = false;
 	if (found) {
 	    ArrayList<String> path = new ArrayList<String>();
 	    String curr = target;
 	    while (!curr.equals(start)) {
 		path.add(0, curr);
-		graph.get(curr).visited = false;
+		//graph.get(curr).visited = false;
 		curr = graph.get(curr).parent;
 	    }//while
 	    path.add(0, start);

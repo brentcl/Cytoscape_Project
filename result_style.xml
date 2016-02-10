@@ -123,17 +123,24 @@
 <discreteMappingEntry value="#003d99" attributeValue="DeletionFrameshift"/>
 <discreteMappingEntry value="#00b3ff" attributeValue="InsertionFrameshift"/>
 <discreteMappingEntry value="#008a99" attributeValue="CompoundSubstitution"/>
-<discreteMappingEntry value="#00664d" attributeValue="Pathway"/>
-<discreteMappingEntry value="#a6ff00" attributeValue="Sequence"/>
-<discreteMappingEntry value="#998200" attributeValue="HistologySubType"/>
-<discreteMappingEntry value="#995400" attributeValue="PrimaryHistology"/>
-<discreteMappingEntry value="#661a00" attributeValue="ComplexFrameshift"/>
+<discreteMappingEntry value="#00664d" attributeValue="Organism"/>
+<discreteMappingEntry value="#a6ff00" attributeValue="Pathway"/>
+<discreteMappingEntry value="#998200" attributeValue="Sequence"/>
+<discreteMappingEntry value="#995400" attributeValue="FunctionalDomain"/>
+<discreteMappingEntry value="#661a00" attributeValue="HistologySubType"/>
+<discreteMappingEntry value="#990026" attributeValue="PrimaryHistology"/>
+<discreteMappingEntry value="#99005c" attributeValue="ModifiedResidue"/>
+<discreteMappingEntry value="#a300cc" attributeValue="ModifiedResidueType"/>
+<discreteMappingEntry value="#000566" attributeValue="SignalPeptide"/>
+<discreteMappingEntry value="#0066cc" attributeValue="implicatedIn"/>
+<discreteMappingEntry value="#004766" attributeValue="TopologicalDomain"/>
+<discreteMappingEntry value="#00f2ff" attributeValue="ComplexFrameshift"/>
 </discreteMapping>
 </visualProperty>
 <visualProperty name="NODE_SIZE">
 <continuousMapping attributeType="long" attributeName="degree">
 <continuousMappingPoint lesserValue="50.0" greaterValue="50.0" equalValue="50.0" attrValue="1.0"/>
-<continuousMappingPoint lesserValue="750.0" greaterValue="750.0" equalValue="750.0" attrValue="48273"/>
+<continuousMappingPoint lesserValue="750.0" greaterValue="750.0" equalValue="750.0" attrValue="35797"/>
 </continuousMapping>
 </visualProperty>
 </node></visualStyle>

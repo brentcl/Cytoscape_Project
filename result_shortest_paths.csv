@@ -1,7 +1,8 @@
 node,attribute,degree,edge,edge_degree,target,attribute,degree
-Human_BRAF,Gene,35797,hasMutation,22,Mutation-4384239,Missense,30
-Mutation-4384239,Missense,30,hasWildTypeResidue,1,K,MutantType,99
-Human_BRAF,Gene,35797,hasMutation,22,Mutation-4384239,Missense,30
-Mutation-4384239,Missense,30,hasWildTypeResidue,1,K,MutantType,99
-Mutation-1568917,CodingSilent,30,hasWildTypeResidue,1,K,MutantType,99
-Human_EGFR,Gene,11713,hasMutation,21,Mutation-1568917,CodingSilent,30
+Human_BRAF,Gene,35797,hasMutation,22,Mutation-4384239,Missense,29
+Mutation-4384239,Missense,29,hasWildTypeResidue,1,K,MutantType,99
+Human_BRAF,Gene,35797,associatedWith,6,Cancer-NS_NS,Cancer,11
+Mutation-1568917,CodingSilent,29,implicatedIn,1,Cancer-NS_NS,Cancer,11
+Human_EGFR,Gene,11713,hasMutation,21,Mutation-1568917,CodingSilent,29
+Human_BRAF,Gene,35797,hasMutation,25,Mutation-249889,Missense,32
+Mutation-249889,Missense,32,hasWildTypeResidue,1,V,MutantType,145
