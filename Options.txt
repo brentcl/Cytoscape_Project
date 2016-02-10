@@ -3,6 +3,6 @@ Genes: Human_EGFR
 Threshold: 2
 Max Size: 750.0
 Shortest Path - Start:
-Human_BRAF K R Human_EGFR
-Human_EGFR S D 0 Human_BRAF
+Human_BRAF N:K N:V Human_EGFR
+Human_EGFR A:Missense A:MutantType A:PKAEndLocation Human_BRAF
 End

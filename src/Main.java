@@ -64,9 +64,21 @@ public class Main {
     private static ArrayList<String> bfs(HashMap<String, Node> graph, String[] search) {
 	ArrayList<String> path = new ArrayList<String>();
 	path.add(search[0]);
+	String start = search[0];
 	for (int i = 0; i < search.length-1; ++i) {
-	    ArrayList<String> temp = bfs_aux(graph, search[i], search[i+1]);
-	    if (temp != null) for (int j = 0; j < temp.size(); ++j) path.add(temp.get(j));
+	    //System.out.println(start);
+	    ArrayList<String> temp = new ArrayList<String>();
+	    if (i  == search.length-2) temp = bfs_aux(graph, start, search[i+1], true);
+	    else {
+		String[] arg = search[i+1].split(":");
+		//System.out.println(arg[0] + " " + arg[1]);
+		if (arg[0].equals("N")) temp = bfs_aux(graph, start, arg[1], true);
+		else temp = bfs_aux(graph, start, arg[1], false);
+	    }//else
+	    if (temp != null) {
+		for (int j = 0; j < temp.size(); ++j) path.add(temp.get(j));
+		start = path.get(path.size()-1);
+	    }//if
 	    else {
 		path = null;
 		break;
@@ -75,17 +87,30 @@ public class Main {
 	return path;
     }//bfs
     
-    private static ArrayList<String> bfs_aux(HashMap<String, Node> graph, String start, String target) {
+    private static ArrayList<String> bfs_aux(HashMap<String, Node> graph, String start, String target, boolean nameSearch) {
 	Queue<Node> q = new LinkedList<Node>();
 	ArrayList<Node> visited = new ArrayList<Node>();
 	q.add(graph.get(start));
 	boolean found = false;
+	String goal = new String();
 	while (!q.isEmpty()) {
 	    Node temp = q.poll();
-	    if (temp.name.equals(target)) {
-		found = true;
-		break;
+	    if (nameSearch) {
+		//System.out.println("N Goal Check - " + temp.name);
+		if (temp.name.equals(target)) {
+		    found = true;
+		    goal = temp.name;
+		    break;
+		}//if
 	    }//if
+	    else {
+		//System.out.println("A Goal Check - " + target + " " + temp.attribute);
+		if (temp.attribute.equals(target)) {
+		    found = true;
+		    goal = temp.name;
+		    break;
+		}//if
+	    }//else
 	    for (int i = 0; i < temp.sourceOfChildren.size(); ++i) {
 		String child = temp.sourceOfChildren.get(i);
 		if (!graph.get(child).visited) {
@@ -108,7 +133,7 @@ public class Main {
 	for (Node nd : visited) nd.visited = false;
 	if (found) {
 	    ArrayList<String> path = new ArrayList<String>();
-	    String curr = target;
+	    String curr = goal;
 	    while (!curr.equals(start)) {
 		path.add(0, curr);
 		//graph.get(curr).visited = false;
