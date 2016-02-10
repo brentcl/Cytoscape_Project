@@ -61,7 +61,21 @@ public class Main {
 	
     }//Node
 
-    private static ArrayList<String> bfs(HashMap<String, Node> graph, String start, String target) {
+    private static ArrayList<String> bfs(HashMap<String, Node> graph, String[] search) {
+	ArrayList<String> path = new ArrayList<String>();
+	path.add(search[0]);
+	for (int i = 0; i < search.length-1; ++i) {
+	    ArrayList<String> temp = bfs_aux(graph, search[i], search[i+1]);
+	    if (temp != null) for (int j = 0; j < temp.size(); ++j) path.add(temp.get(j));
+	    else {
+		path = null;
+		break;
+	    }//else
+	}//for
+	return path;
+    }//bfs
+    
+    private static ArrayList<String> bfs_aux(HashMap<String, Node> graph, String start, String target) {
 	Queue<Node> q = new LinkedList<Node>();
 	ArrayList<Node> visited = new ArrayList<Node>();
 	q.add(graph.get(start));
@@ -100,7 +114,7 @@ public class Main {
 		//graph.get(curr).visited = false;
 		curr = graph.get(curr).parent;
 	    }//while
-	    path.add(0, start);
+	    //path.add(0, start);
 	    return path;
 	}//if
 	else return null;
@@ -114,9 +128,7 @@ public class Main {
 
     public static long DEGREE_THRESHOLD;
 
-    public static ArrayList<String> starts = new ArrayList<String>();
-
-    public static ArrayList<String> goals = new ArrayList<String>();
+    public static ArrayList<String[]> searches = new ArrayList<String[]>();
 
     public static void setGeneList(String genes) {
 	genes = genes.replace(" ", "");
@@ -171,8 +183,7 @@ public class Main {
 		while (!temp.equals("End")) {
 		    //System.out.println(temp);
 		    String[] nodes = temp.split(" ");
-		    starts.add(nodes[0]);
-		    goals.add(nodes[1]);
+		    searches.add(nodes);
 		    temp = bufferedReader.readLine();
 		}//while 
 		break;
@@ -331,10 +342,10 @@ public class Main {
 	    FileWriter fw4 = new FileWriter(file_write4.getAbsoluteFile());
 	    BufferedWriter bw4 = new BufferedWriter(fw4);
 	    bw4.write("node,attribute,degree,edge,edge_degree,target,attribute,degree\n");
-	    for (int i = 0; i < starts.size(); ++i) {
-		ArrayList<String> path = bfs(graph, starts.get(i), goals.get(i));
+	    for (int i = 0; i < searches.size(); ++i) {
+		ArrayList<String> path = bfs(graph, searches.get(i));
 		if (path == null) {
-		    System.out.println("No path found between " + starts.get(i) + " and " + goals.get(i));
+		    System.out.println("No path found");// between " + starts.get(i) + " and " + goals.get(i));
 		    continue;
 		}//if
 		for (int j = 0; j < path.size()-1; ++j) {
