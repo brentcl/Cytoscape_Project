@@ -1,13 +1,8 @@
 node,attribute,degree,edge,edge_degree,target,attribute,degree
+Human_EGFR,Gene,11713,hasMutation,18,Mutation-1755314,Missense,26
+Mutation-1755314,Missense,26,implicatedIn,1,Cancer-carcinoma_NS,Cancer,86
+Human_BRAF,Gene,35797,associatedWith,6,Cancer-carcinoma_NS,Cancer,86
 Human_BRAF,Gene,35797,hasMutation,22,Mutation-4384239,Missense,29
 Mutation-4384239,Missense,29,hasWildTypeResidue,1,K,MutantType,99
-Mutation-1448606,CodingSilent,28,hasPKAResidue,1,K,MutantType,99
-Mutation-1448606,CodingSilent,28,hasWildTypeResidue,1,V,MutantType,145
-Mutation-116668,Missense,28,hasMutantType,1,V,MutantType,145
+Mutation-116668,Missense,28,hasPKAResidue,1,K,MutantType,99
 Human_EGFR,Gene,11713,hasMutation,20,Mutation-116668,Missense,28
-Human_EGFR,Gene,11713,hasMutation,18,Mutation-1755314,Missense,26
-Mutation-1755314,Missense,26,hasMutantType,1,E,MutantType,97
-Mutation-3634279,Missense,22,hasMutantType,1,E,MutantType,97
-Mutation-3634279,Missense,22,hasPKAStartLocation,1,0,PKAEndLocation,1124
-Mutation-4384240,Missense,23,hasPKAStartLocation,1,0,PKAEndLocation,1124
-Human_BRAF,Gene,35797,hasMutation,16,Mutation-4384240,Missense,23
