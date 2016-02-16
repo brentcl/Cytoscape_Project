@@ -231,6 +231,8 @@ public class Main {
 
     public static ArrayList<String[]> searches = new ArrayList<String[]>();
 
+    public static ArrayList<String> combine = new ArrayList<String>();
+    
     public static void setGeneList(String genes) {
 	genes = genes.replace(" ", "");
 	genes = genes.replace("\"", "");
@@ -257,6 +259,14 @@ public class Main {
 	max = '"' + max + '"';
 	Style.changeMax(max);
     }//changeMax
+
+    public static void setCombine(String comb) {
+	comb = comb.replace(" ", "");
+	if (!comb.equals("none")) {
+	    String[] combs = comb.split(",");
+	    for (String s: combs) combine.add(s);
+	}//if
+    }//setCombine
     
     public static void readOptions() throws IOException {
 	File file_read = new File("Options.txt");
@@ -287,6 +297,9 @@ public class Main {
 		    searches.add(nodes);
 		    temp = bufferedReader.readLine();
 		}//while 
+		break;
+	    case "Combine Nodes Containing":
+		setCombine(opt[1]);
 		break;
 	    default:
 		break;
@@ -376,7 +389,61 @@ public class Main {
 	    }//while
 	    fileReader.close();
 	    bw.close();
-	    File file_read2 = new File("temp.csv");
+	    if (!combine.isEmpty()) {
+		File file_read1_2 = new File("temp.csv");
+		FileReader fileReader1_2 = new FileReader(file_read1_2);
+		File file_write1_2 = new File("temp2.csv");
+		if (!file_write1_2.exists()) {
+		    file_write1_2.createNewFile();
+		}//if
+		FileWriter fw1_2 = new FileWriter(file_write1_2.getAbsoluteFile());
+		BufferedWriter bw1_2 = new BufferedWriter(fw1_2);
+		BufferedReader bufferedReader1_2 = new BufferedReader(fileReader1_2);
+		ArrayList <String> combined = new ArrayList<String>();
+		while ((line = bufferedReader1_2.readLine()) != null) {
+		    String[] temp = line.split(",");
+		    boolean changed = false;
+		    for (String s: combine) {
+			if (temp[0].contains(s)) {
+			    if (!combined.contains(temp[0])) {
+				combined.add(temp[0]);
+				temp[0] = types.get(temp[0]);
+				types.put(temp[0], temp[0]);
+				if (degrees.get(temp[0]) == null) degrees.put(temp[0], (long)1);
+				else degrees.put(temp[0], degrees.get(temp[0]).longValue()+(long)1);
+			    }//if
+			    else temp[0] = types.get(temp[0]);
+			    changed = true;
+			}//if
+			if (temp[2].contains(s)) {
+			    if (!combined.contains(temp[2])) {
+				combined.add(temp[2]);
+				temp[2] = types.get(temp[2]);
+				if (degrees.get(temp[2]) == null) degrees.put(temp[2], (long)1);
+				else degrees.put(temp[2], degrees.get(temp[2]).longValue()+(long)1);
+			    }//if
+			    else temp[2] = types.get(temp[2]);
+			    changed = true;
+			}//if
+		    }//for
+		    if (changed) {
+			String edge = temp[0] + ',' + temp[1] + ',' + temp[2];
+			String s = "";
+			if (edges.get(edge) == null) {
+			    edges.put(edge, (long)1);
+			    s = edge + '\n';
+			}//if
+			else edges.put(edge, edges.get(edge).longValue()+(long)1);
+			if (!s.isEmpty()) bw1_2.write(s);
+		    }//else
+		    else bw1_2.write(line + '\n');
+		}//while
+		bw1_2.close();
+		fileReader1_2.close();
+	    }//if
+	    File file_read2;
+	    if (!combine.isEmpty()) file_read2 = new File("temp2.csv");
+	    else file_read2 = new File("temp.csv");
 	    FileReader fileReader2 = new FileReader(file_read2);
 	    File file_write2 = new File("result.csv");
 	    if (!file_write2.exists()) {
@@ -391,7 +458,7 @@ public class Main {
 	    //HashMap<String, String> types = new HashMap();
 	    while ((line = bufferedReader2.readLine()) != null) {
 		String[] temp = line.split(",");
-		//System.out.println(line + ' ' + temp.length);
+		//System.out.println(temp[0] + ' ' + temp[2]);
 		if (degrees.get(temp[0]).longValue() >= DEGREE_THRESHOLD && degrees.get(temp[2]).longValue() >= DEGREE_THRESHOLD) {
 		    if (graph.get(temp[0]) == null) {
 			Node nd = new Node(temp[0], types.get(temp[0]), degrees.get(temp[0]).longValue());
@@ -444,7 +511,7 @@ public class Main {
 	    BufferedWriter bw4 = new BufferedWriter(fw4);
 	    bw4.write("node,attribute,degree,edge,edge_degree,target,attribute,degree\n");
 	    for (int i = 0; i < searches.size(); ++i) {
-		ArrayList<String> path = depth_iterating(graph, searches.get(i));
+		ArrayList<String> path = bfs(graph, searches.get(i));
 		if (path == null) {
 		    System.out.println("No path found");// between " + starts.get(i) + " and " + goals.get(i));
 		    continue;
