@@ -6,6 +6,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Set;
+import java.util.HashSet;
 import java.util.Arrays;
 import java.util.Queue;
 import java.util.LinkedList;
@@ -61,13 +63,21 @@ public class Main {
 	
     }//Node
 
-    private static boolean checkReqs(HashMap<String, Node> graph, String start, String goal, ArrayList<String> nameReqs, ArrayList<String> attReqs) {
+    private static boolean checkReqs(HashMap<String, Node> graph, String start, String goal, final String[] nReqs, final String[] aReqs) {
+	System.out.println("checkReqs start");
 	Node curr = graph.get(goal);
+	ArrayList<String> nameReqs = new ArrayList<String>();
+	ArrayList<String> attReqs = new ArrayList<String>();
+	for (String s : nReqs) if (s != null)nameReqs.add(s);
+	for (String s : aReqs) if (s != null) attReqs.add(s);
 	while (!curr.name.equals(start)) {
-	    if (!nameReqs.isEmpty()) nameReqs.remove(curr.name);
+	    System.out.println("while curr name: " + curr.name + " nameReqs: " + nameReqs + " attReqs: " + attReqs);
+	    if (!nameReqs.isEmpty() && nameReqs.contains(curr.name)) {nameReqs.remove(curr.name);
+		System.out.println("Removed! " + nameReqs);}
 	    if (!attReqs.isEmpty()) attReqs.remove(curr.attribute);
 	    curr = graph.get(curr.parent);
 	}//while
+	System.out.println("checkReqs end - start: " + start + " curr: " + curr.name);
 	if (nameReqs.isEmpty() && attReqs.isEmpty()) return true;
 	else return false;
     }//checkReqs
@@ -88,17 +98,25 @@ public class Main {
 	    else attReqs.add(reqs[1]);
 	    //System.out.println(reqs[1]);
 	}//for
-	for (int lim = 1; lim < graph.size(); ++lim) {
-	    ArrayList<String> expSet = new ArrayList<String>();
+	for (int lim = 1; lim < 5; ++lim) {
+	    System.out.println("Iterate! lim = " + lim);
 	    graph.get(start).visited = true;
-	    path = depth_limited(graph, graph.get(start), start, goal, expSet, nameReqs, attReqs, 0, lim);
+	    path = depth_limited(graph, graph.get(start), start, goal, nameReqs.toArray(new String[nameReqs.size()]), attReqs.toArray(new String[nameReqs.size()]), 0, lim);
 	    graph.get(start).visited = false;
 	    if (path != null) return path;
+	    else {
+		Set<String> set = graph.keySet();
+		for (Object s: set.toArray()) {
+		    //System.out.println(s.toString());
+		    graph.get(s.toString()).visited = false;
+		}//for
+	    }//else
 	}//for
 	return null;
     }//depth_iterating
 
-    private static ArrayList<String> depth_limited(HashMap<String, Node> graph, Node curr, String start, String goal, ArrayList<String> expSet, ArrayList<String> nameReqs, ArrayList<String> attReqs, int count, int lim) {
+    private static ArrayList<String> depth_limited(HashMap<String, Node> graph, Node curr, String start, String goal, final String[] nameReqs, final String[] attReqs, int count, int lim) {
+	if (curr.name.equals("K") || curr.name.equals("Missense")) System.out.println("Branch: " + curr.name + " count = " + count + " lim = " + lim);
 	if (count < lim) {
 	    //System.out.println(expSet);
 	    ArrayList<String> path = new ArrayList<String>();
@@ -110,13 +128,15 @@ public class Main {
 		path.add(0, start);
 		return path;
 	    }//if
-	    else {
+	    else  if (!curr.name.equals(goal)) {
 		for (String s: curr.sourceOfChildren) {
+		    if (curr.name.equals("K") || curr.name.equals("Missense")) System.out.println("\tcurr: " + curr.name + " s: " + s + " " + graph.get(s).visited);
 		    if (!graph.get(s).visited) {//if (!expSet.contains(s)) {
 			//expSet.add(s);
 			graph.get(s).visited = true;
 			graph.get(s).parent = curr.name;
-			ArrayList<String> temp = depth_limited(graph, graph.get(s), start, goal, expSet, nameReqs, attReqs, count+1, lim);
+			if (curr.name.equals("K") || curr.name.equals("Missense")) System.out.println("\tCurr: " + curr.name + " Source: " + s);
+			ArrayList<String> temp = depth_limited(graph, graph.get(s), start, goal, nameReqs, attReqs, count+1, lim);
 			graph.get(s).visited = false;
 			if (temp != null) return temp;
 		    }//if
@@ -126,15 +146,24 @@ public class Main {
 			//expSet.add(s);
 			graph.get(s).visited = true;
 			graph.get(s).parent = curr.name;
-			ArrayList<String> temp = depth_limited(graph, graph.get(s), start, goal, expSet, nameReqs, attReqs, count+1, lim);
+			System.out.println("\tCurr: " + curr.name + " Target: " + s);
+			ArrayList<String> temp = depth_limited(graph, graph.get(s), start, goal, nameReqs, attReqs, count+1, lim);
 			graph.get(s).visited = false;
 			if (temp != null) return temp;
 		    }//if
 		}//for
+		System.out.println("Branch End! - No Successors");
+		return null;
+	    }//else if
+	    else {
+		System.out.println("Branch End! - Goal found but not with reqs");
 		return null;
 	    }//else
 	}//if
-	else return null;
+	else {
+	    System.out.println("Branch End! - lim reached");
+	    return null;
+	}//else
     }//depth_limited
     
     private static ArrayList<String> bfs(HashMap<String, Node> graph, String[] search) {
@@ -419,6 +448,7 @@ public class Main {
 			    if (!combined.contains(temp[2])) {
 				combined.add(temp[2]);
 				temp[2] = types.get(temp[2]);
+				types.put(temp[2], temp[2]);
 				if (degrees.get(temp[2]) == null) degrees.put(temp[2], (long)1);
 				else degrees.put(temp[2], degrees.get(temp[2]).longValue()+(long)1);
 			    }//if

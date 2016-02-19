@@ -1,7 +1,5 @@
 node,attribute,degree,edge,edge_degree,target,attribute,degree
-Human_BRAF,Gene,35797,hasMutation,22,Mutation-4384239,Missense,29
-Mutation-4384239,Missense,29,hasWildTypeResidue,1,K,MutantType,99
-Mutation-1448606,CodingSilent,28,hasPKAResidue,1,K,MutantType,99
-Mutation-1448606,CodingSilent,28,hasWildTypeResidue,1,V,MutantType,145
-Mutation-116668,Missense,28,hasMutantType,1,V,MutantType,145
-Human_EGFR,Gene,11713,hasMutation,20,Mutation-116668,Missense,28
+Human_BRAF,Gene,54781,hasMutation,316,Missense,Mutation,4228
+Missense,Mutation,4228,hasPKAResidue,86,K,MutantType,615
+Missense,Mutation,4228,hasPKAResidue,86,K,MutantType,615
+Human_EGFR,Gene,55473,hasMutation,766,Missense,Mutation,4228
