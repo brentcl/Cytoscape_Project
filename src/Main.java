@@ -370,7 +370,7 @@ public class Main {
 			temp[i] = temp[i].split("#")[1];
 		    }//if
 		}//for
-		if (temp[1].equals("comment")) continue;
+		if (temp[1].equals("comment") || temp[0].equals("label") || temp[2].equals("label") || temp[0].equals("comment") || temp[2].equals("comment")) continue;
 		if (!REMOVE.contains(temp[1])) {
 		    if (temp[1].equals("type")) {
 			types.put(temp[0], temp[2]);
@@ -389,6 +389,7 @@ public class Main {
 		    }//else
 		}//if
 		if (temp.length > 3) {
+		    //if (temp[3].equals("label")) System.out.println(line + " " + REMOVE.contains(temp[3]));
 		    if (!REMOVE.contains(temp[3])) {
 			if (temp[3].equals("type")) {
 			    types.put(temp[2], temp[4]);

@@ -104,38 +104,49 @@
 <visualProperty name="NODE_LABEL" default="">
 <passthroughMapping attributeType="string" attributeName="name"/></visualProperty><visualProperty name="NODE_FILL_COLOR" default="#C80000"><discreteMapping attributeType="string" attributeName="attribute">
 <discreteMappingEntry value="#ff001a" attributeValue="Gene"/>
-<discreteMappingEntry value="#660029" attributeValue="Mutation"/>
-<discreteMappingEntry value="#990082" attributeValue="Cancer"/>
-<discreteMappingEntry value="#8000ff" attributeValue="associatedWith"/>
-<discreteMappingEntry value="#0066ff" attributeValue="HistologySubType"/>
-<discreteMappingEntry value="#005c99" attributeValue="null"/>
-<discreteMappingEntry value="#005766" attributeValue="MutantType"/>
-<discreteMappingEntry value="#00cc99" attributeValue="MutationDescription"/>
-<discreteMappingEntry value="#006605" attributeValue="MutationZygosity"/>
-<discreteMappingEntry value="#4c9900" attributeValue="PKAEndLocation"/>
-<discreteMappingEntry value="#ccb800" attributeValue="PKAResidue"/>
-<discreteMappingEntry value="#ff8c00" attributeValue="PKAStartLocation"/>
-<discreteMappingEntry value="#993600" attributeValue="PrimaryHistology"/>
-<discreteMappingEntry value="#660014" attributeValue="PrimaryName"/>
-<discreteMappingEntry value="#ff008c" attributeValue="WildTypeResidue"/>
-<discreteMappingEntry value="#ff00f2" attributeValue="FunctionalDomain"/>
-<discreteMappingEntry value="#0f0099" attributeValue="ModifiedResidue"/>
-<discreteMappingEntry value="#003d99" attributeValue="ModifiedResidueType"/>
-<discreteMappingEntry value="#00b3ff" attributeValue="SignalPeptide"/>
-<discreteMappingEntry value="#008a99" attributeValue="TopologicalDomain"/>
-<discreteMappingEntry value="#00664d" attributeValue=""/>
-<discreteMappingEntry value="#a6ff00" attributeValue="implicatedIn"/>
-<discreteMappingEntry value="#998200" attributeValue="Organism"/>
-<discreteMappingEntry value="#995400" attributeValue="Pathway"/>
-<discreteMappingEntry value="#661a00" attributeValue="Sequence"/>
-<discreteMappingEntry value="#990026" attributeValue="Reaction"/>
-<discreteMappingEntry value="#99005c" attributeValue="isPartOf"/>
+<discreteMappingEntry value="#660029" attributeValue="Missense"/>
+<discreteMappingEntry value="#990082" attributeValue="CodingSilent"/>
+<discreteMappingEntry value="#8000ff" attributeValue="DeletionInframe"/>
+<discreteMappingEntry value="#0066ff" attributeValue="InsertionInframe"/>
+<discreteMappingEntry value="#005c99" attributeValue="Cancer"/>
+<discreteMappingEntry value="#005766" attributeValue="associatedWith"/>
+<discreteMappingEntry value="#00cc99" attributeValue="HistologySubType"/>
+<discreteMappingEntry value="#006605" attributeValue="MutantType"/>
+<discreteMappingEntry value="#4c9900" attributeValue="MutationDescription"/>
+<discreteMappingEntry value="#ccb800" attributeValue="MutationZygosity"/>
+<discreteMappingEntry value="#ff8c00" attributeValue="PKAEndLocation"/>
+<discreteMappingEntry value="#993600" attributeValue="PKAResidue"/>
+<discreteMappingEntry value="#660014" attributeValue="PKAStartLocation"/>
+<discreteMappingEntry value="#ff008c" attributeValue="null"/>
+<discreteMappingEntry value="#ff00f2" attributeValue="PrimaryHistology"/>
+<discreteMappingEntry value="#0f0099" attributeValue="PrimaryName"/>
+<discreteMappingEntry value="#003d99" attributeValue="WildTypeResidue"/>
+<discreteMappingEntry value="#00b3ff" attributeValue="FunctionalDomain"/>
+<discreteMappingEntry value="#008a99" attributeValue="ComplexDeletionInframe"/>
+<discreteMappingEntry value="#00664d" attributeValue="ModifiedResidue"/>
+<discreteMappingEntry value="#a6ff00" attributeValue="ComplexInsertionInframe"/>
+<discreteMappingEntry value="#998200" attributeValue="ModifiedResidueType"/>
+<discreteMappingEntry value="#995400" attributeValue="Nonsense"/>
+<discreteMappingEntry value="#661a00" attributeValue="OtherMutation"/>
+<discreteMappingEntry value="#990026" attributeValue="SignalPeptide"/>
+<discreteMappingEntry value="#99005c" attributeValue="DeletionFrameshift"/>
+<discreteMappingEntry value="#a300cc" attributeValue="InsertionFrameshift"/>
+<discreteMappingEntry value="#000566" attributeValue="TopologicalDomain"/>
+<discreteMappingEntry value="#0066cc" attributeValue=""/>
+<discreteMappingEntry value="#004766" attributeValue="CompoundSubstitution"/>
+<discreteMappingEntry value="#00f2ff" attributeValue="ComplexFrameshift"/>
+<discreteMappingEntry value="#00ff99" attributeValue="implicatedIn"/>
+<discreteMappingEntry value="#cccccc" attributeValue="Organism"/>
+<discreteMappingEntry value="#a3cc00" attributeValue="Pathway"/>
+<discreteMappingEntry value="#ffbf00" attributeValue="Sequence"/>
+<discreteMappingEntry value="#cc5c00" attributeValue="Reaction"/>
+<discreteMappingEntry value="#cc2900" attributeValue="isPartOf"/>
 </discreteMapping>
 </visualProperty>
 <visualProperty name="NODE_SIZE">
 <continuousMapping attributeType="long" attributeName="degree">
 <continuousMappingPoint lesserValue="50.0" greaterValue="50.0" equalValue="50.0" attrValue="1.0"/>
-<continuousMappingPoint lesserValue="750.0" greaterValue="750.0" equalValue="750.0" attrValue="55473"/>
+<continuousMappingPoint lesserValue="750.0" greaterValue="750.0" equalValue="750.0" attrValue="55467"/>
 </continuousMapping>
 </visualProperty>
 </node></visualStyle>

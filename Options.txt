@@ -1,8 +1,35 @@
 Remove: hasDbXref, hasNameSpace, label, comment, chromosomalPosition, hasCommonName, hasEndLocation, hasFASTAFormat, hasFullName, hasIdentifier, hasMutationAA, hasMutationId, hasOtherName, hasProteinStructure, hasScientificName, hasSequence, hasStartLocation, hasTopologicalDomainType, hasUniprotPrimaryName,hasUniprotSynonymName, hasURI,isPrimaryUniprotId, locatedIn, occursIn, subClassOf, hasMutationImpact, inSample
-Genes: Human_EGFR
+Genes: Human_EGFR Human_BRAF Human_ATM Human_FLT3 Human_IRR Human_DNAPK Human_EPHB1 Human_LRRK2
 Threshold: 2
 Max Size: 750.0
 Shortest Path - Start:
-Human_BRAF N:K N:Missense Human_EGFR
+Human_BRAF Human_EGFR
+Human_BRAF Human_ATM
+Human_BRAF Human_FLT3
+Human_BRAF Human_IRR
+Human_BRAF Human_DNAPK
+Human_BRAF Human_EPHB1
+Human_BRAF Human_LRRK2
+Human_EGFR Human_ATM
+Human_EGFR Human_FLT3
+Human_EGFR Human_IRR
+Human_EGFR Human_DNAPK
+Human_EGFR Human_EPHB1
+Human_EGFR Human_LRRK2
+Human_ATM Human_FLT3
+Human_ATM Human_IRR
+Human_ATM Human_DNAPK
+Human_ATM Human_EPHB1
+Human_ATM Human_LRRK2
+Human_FLT3 Human_IRR
+Human_FLT3 Human_DNAPK
+Human_FLT3 Human_EPHB1
+Human_FLT3 Human_LRRK2
+Human_IRR Human_DNAPK
+Human_IRR Human_EPHB1
+Human_IRR Human_LRRK2
+Human_DNAPK Human_EPHB1
+Human_DNAPK Human_LRRK2
+Human_EPHB1 Human_LRRK2
 End
 Combine Nodes Containing: Mutation-

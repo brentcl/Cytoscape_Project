@@ -4101,26 +4101,6 @@ Mutation-460,implicatedIn,Cancer-adenoma_NS
 Mutation-460,implicatedIn,Cancer-carcinoma_transitional_cell_carcinoma
 Mutation-460,implicatedIn,Cancer-serrated_polyp_hyperplastic_polyp
 Mutation-460,implicatedIn,Cancer-haematopoietic_neoplasm_blastic_plasmacytoid_dendritic_cell_neoplasm
-Human_BRAF,,label
-label,,Serine/threonine-protein kinase B-raf
-label,,BRAF
-label,,BRAF1
-label,,RAFB1
-Human_EGFR,,label
-label,,Epidermal growth factor receptor
-label,,EGFR
-label,,ERBB
-label,,ERBB1
-label,,HER1
-Human_ATM,,label
-label,,ATM
-label,,Serine-protein kinase ATM
-Human_BRAF,,comment
-comment,,"Protein kinase involved in the transduction of mitogenic signals from the cell membrane to the nucleus. May play a role in the postsynaptic responses of hippocampal neuron. Phosphorylates MAP2K1
-Human_EGFR,,comment
-comment,,"Receptor tyrosine kinase binding ligands of the EGF family and activating several signaling cascades to convert extracellular cues into appropriate cellular responses. Known ligands include EGF
-Human_ATM,,comment
-comment,,"Serine/threonine protein kinase which activates checkpoint signaling upon double strand breaks (DSBs)
 Human_BRAF,,chromosomalPosition
 chromosomalPosition,,7q34 -q36
 Human_EGFR,,chromosomalPosition
@@ -43670,14 +43650,6 @@ Mutation-5351705,implicatedIn,Cancer-haematopoietic_neoplasm_acute_myeloid_leuka
 Mutation-5351716,implicatedIn,Cancer-haematopoietic_neoplasm_acute_myeloid_leukaemia
 Mutation-5351717,implicatedIn,Cancer-haematopoietic_neoplasm_acute_myeloid_leukaemia
 Mutation-5351718,implicatedIn,Cancer-haematopoietic_neoplasm_acute_myeloid_leukaemia
-Human_FLT3,,label
-label,,STK1
-label,,Receptor-type tyrosine-protein kinase FLT3
-label,,CD135
-label,,FLK2
-label,,FLT3
-Human_FLT3,,comment
-comment,,"Tyrosine-protein kinase that acts as cell-surface receptor for the cytokine FLT3LG and regulates differentiation
 Human_FLT3,,chromosomalPosition
 chromosomalPosition,,13q12.3
 Human_FLT3,,hasCellularLocation
@@ -43700,13 +43672,6 @@ Human_FLT3,,hasUniprotSynonymName
 hasUniprotSynonymName,,STK1
 hasUniprotSynonymName,,CD135
 hasUniprotSynonymName,,FLK2
-Human_DNAPK,,label
-label,,DNA-dependent protein kinase catalytic subunit
-label,,HYRC
-label,,HYRC1
-label,,PRKDC
-Human_DNAPK,,comment
-comment,,"Serine/threonine-protein kinase that acts as a molecular sensor for DNA damage. Involved in DNA non-homologous end joining (NHEJ) required for double-strand break (DSB) repair and V(D)J recombination. Must be bound to DNA to express its catalytic properties. Promotes processing of hairpin DNA structures in V(D)J recombination by activation of the hairpin endonuclease artemis (DCLRE1C). The assembly of the DNA-PK complex at DNA ends is also required for the NHEJ ligation step. Required to protect and align broken ends of DNA. May also act as a scaffold protein to aid the localization of DNA repair proteins to the site of damage. Found at the ends of chromosomes
 Human_IRR,hasMutation,Mutation-3475400
 Human_IRR,hasMutation,Mutation-3475401
 Human_IRR,hasMutation,Mutation-3475402
@@ -51156,12 +51121,6 @@ Mutation-5035196,implicatedIn,Cancer-carcinoma_adenocarcinoma
 Mutation-5289844,implicatedIn,Cancer-carcinoma_adenocarcinoma
 Mutation-5019510,implicatedIn,Cancer-haemangioblastoma_NS
 Mutation-5019810,implicatedIn,Cancer-haemangioblastoma_NS
-Human_IRR,,label
-label,,Insulin receptor-related protein
-label,,INSRR
-label,,IRR
-Human_IRR,,comment
-comment,,Receptor with tyrosine-protein kinase activity. Functions as a pH sensing receptor which is activated by increased extracellular pH. Activates an intracellular signaling pathway that involves IRS1 and AKT1/PKB.
 Human_DNAPK,,chromosomalPosition
 chromosomalPosition,,8p11.1-q11.22
 Human_IRR,,chromosomalPosition
@@ -64540,15 +64499,6 @@ Mutation-5334188,implicatedIn,Cancer-carcinoma_adenocarcinoma
 Mutation-5334189,implicatedIn,Cancer-carcinoma_adenocarcinoma
 Mutation-5350898,implicatedIn,Cancer-carcinoma_adenocarcinoma
 Mutation-5350899,implicatedIn,Cancer-carcinoma_adenocarcinoma
-Human_EPHB1,,label
-label,,ELK
-label,,EPHB1
-label,,EPHT2
-label,,Ephrin type-B receptor 1
-label,,HEK6
-label,,NET
-Human_EPHB1,,comment
-comment,,"Receptor tyrosine kinase which binds promiscuously transmembrane ephrin-B family ligands residing on adjacent cells
 Human_EPHB1,,chromosomalPosition
 chromosomalPosition,,3q22.2
 Human_EPHB1,,hasCellularLocation
@@ -70590,12 +70540,6 @@ Mutation-5339081,implicatedIn,Cancer-carcinoma_adenocarcinoma
 Mutation-5342100,implicatedIn,Cancer-carcinoma_adenocarcinoma
 Mutation-5342102,implicatedIn,Cancer-carcinoma_adenocarcinoma
 Mutation-5342104,implicatedIn,Cancer-carcinoma_adenocarcinoma
-Human_LRRK2,,label
-label,,Leucine-rich repeat serine/threonine-protein kinase 2
-label,,LRRK2
-label,,PARK8
-Human_LRRK2,,comment
-comment,,"Positively regulates autophagy through a calcium-dependent activation of the CaMKK/AMPK signaling pathway. The process involves activation of nicotinic acid adenine dinucleotide phosphate (NAADP) receptors
 Human_LRRK2,,chromosomalPosition
 chromosomalPosition,,12q11-q12
 Human_LRRK2,,hasCellularLocation

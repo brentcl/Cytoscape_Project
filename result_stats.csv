@@ -64,7 +64,7 @@ Mutation-1100203,23
 H,388
 Human_EGFR-UniProt_beta1-lysine,1
 I,606
-DNA-dependent protein kinase catalytic subunit,2
+DNA-dependent protein kinase catalytic subunit,1
 K,615
 L,1165
 M,279
@@ -769,7 +769,7 @@ Mutation-5187019,22
 Cancer-lymphoid_neoplasm_primary_central_nervous_system_lymphoma,10
 Missense,4228
 Mutation-1746958,23
-PRKDC,3
+PRKDC,2
 Mutation-4596449,23
 Mutation-5036042,22
 Mutation-1732319,23
@@ -792,7 +792,7 @@ Mutation-4820904,22
 Cancer-osteosarcoma_NS,33
 Mutation-22421,27
 Mutation-22420,40
-Human_EPHB1,13892
+Human_EPHB1,13885
 1q21-q23.1,1
 Mutation-4820905,22
 Mutation-4596450,23
@@ -1335,7 +1335,7 @@ carcinoma_pleomorphic_carcinoma,1
 Mutation-5177621,23
 Golgi apparatus membrane,1
 Mutation-3475420,26
-HEK6,3
+HEK6,2
 Human_LRRK2-Kinbase_G-loopSaltBridge,1
 Mutation-3475427,22
 Mutation-3122970,22
@@ -1497,7 +1497,7 @@ Mutation-540823,22
 Mutation-3122914,24
 Mutation-1132738,22
 Mutation-3122915,24
-HER1,2
+HER1,1
 Mutation-3122918,24
 Mutation-540821,22
 Mutation-3122919,24
@@ -1524,7 +1524,7 @@ Mutation-3914989,25
 Mutation-1717032,24
 Mutation-118797,24
 Mutation-48949,24
-Receptor-type tyrosine-protein kinase FLT3,2
+Receptor-type tyrosine-protein kinase FLT3,1
 Mutation-5062240,23
 lymphoid_neoplasm,62
 Mutation-1127934,22
@@ -1721,7 +1721,6 @@ Human_IRR-Cosmic_I-helix,1
 Mutation-3667155,24
 Mutation-5020448,23
 Human_FLT3-Kinbase_beta4strand,1
-Receptor with tyrosine-protein kinase activity. Functions as a pH sensing receptor which is activated by increased extracellular pH. Activates an intracellular signaling pathway that involves IRS1 and AKT1/PKB.,1
 Mutation-4554785,30
 Mutation-1238030,23
 Mutation-5019459,23
@@ -1736,7 +1735,7 @@ Mutation-5134464,22
 Mutation-5110456,22
 Mutation-5134463,22
 Human_EGFR-UniProt_R-spineShellSh1,1
-HYRC1,3
+HYRC1,2
 Human_EPHB1-Kinbase_R-spineShellSh1,1
 Human_EPHB1-Kinbase_R-spineShellSh3,1
 Mutation-3771479,25
@@ -1745,7 +1744,6 @@ Cancer-lymphoid_neoplasm_Burkitt_lymphoma,23
 Mutation-1251015,28
 Mutation-28486,28
 Human_BRAF-UniProt_beta1-lysine,1
-"Tyrosine-protein kinase that acts as cell-surface receptor for the cytokine FLT3LG and regulates differentiation,1
 Phosphoserine-autocatalysis,5
 Mutation-1251019,29
 Mutation-1251016,23
@@ -1858,7 +1856,7 @@ Mutation-728293,22
 Human_EPHB1-UniProt_subdomainVIII,1
 primitive_neuroectodermal_tumour-medulloblastoma_NS,5
 Mutation-1350749,42
-EPHB1,4
+EPHB1,3
 Mutation-1350746,22
 Mutation-4943275,27
 Mutation-4967262,23
@@ -2199,7 +2197,6 @@ Mutation-1284692,24
 carcinoma_large_cell_carcinoma,4
 Mutation-128244,23
 Human_IRR-Kinbase_H-helix,1
-Leucine-rich repeat serine/threonine-protein kinase 2,1
 Mutation-419813,26
 Mutation-419814,26
 Mutation-419812,26
@@ -2248,7 +2245,7 @@ Human_IRR-Cosmic_G-loopSaltBridge,1
 Human_FLT3-Cosmic_R-spineR0,1
 Human_FLT3-Cosmic_R-spineR1,1
 Human_FLT3-Cosmic_R-spineR2,1
-ELK,3
+ELK,2
 Mutation-1361397,22
 Mutation-1361399,22
 Mutation-5086125,23
@@ -2423,7 +2420,7 @@ Mutation-4005267,22
 Mutation-4005268,22
 Mutation-4005266,22
 Mutation-3380409,27
-CD135,3
+CD135,2
 Mutation-3380408,25
 Cancer-chronic_thyroiditis_Hashimotos_thyroiditis,10
 benign_melanocytic_nevus_NS,1
@@ -2484,7 +2481,6 @@ Mutation-5305295,22
 Mutation-3468050,25
 Mutation-3468053,25
 Mutation-3468052,26
-"Receptor tyrosine kinase which binds promiscuously transmembrane ephrin-B family ligands residing on adjacent cells,1
 Mutation-29631,37
 Mutation-250359,27
 Human_FunctionalDomain-C1_1,6
@@ -2570,7 +2566,7 @@ mesothelioma_NS,1
 Mutation-1562123,22
 Mutation-4441423,25
 Mutation-184413,25
-Human_ATM,30048
+Human_ATM,30045
 Mutation-30660,30
 Mutation-249410,23
 myopericytoma,1
@@ -2737,7 +2733,7 @@ Mutation-3900413,22
 Mutation-6213,163
 Mutation-3736992,28
 Human_BRAF-UniProt_CatalyticSpine,1
-EPHT2,3
+EPHT2,2
 monophasic,1
 Human_EGFR-Kinbase_alphaC-beta4loop,1
 ATDC,1
@@ -3156,7 +3152,7 @@ Mutation-5330341,22
 Mutation-5330340,22
 Mutation-4699261,23
 Cancer-other_hyperplastic_polyp,10
-BRAF1,3
+BRAF1,2
 T_cell_prolymphocytic_leukaemia,2
 Mutation-5228659,22
 Mutation-22995,26
@@ -3416,7 +3412,7 @@ Human_EGFR-Kinbase_subdomainIX,1
 Reaction-2730862,1
 Reaction-2730860,1
 Cancer-adnexal_tumour_other,10
-HYRC,3
+HYRC,2
 Human_FLT3-Isoform2_alphaC-glutamate,1
 Mutation-4754696,24
 Processing of DNA ends prior to end rejoining,1
@@ -3989,7 +3985,6 @@ Mutation-402884,23
 Mutation-37034,23
 Mutation-4384241,23
 Human_IRR-Kinbase_beta5strand,1
-comment,16
 Mutation-2110552,23
 Mutation-226531,23
 Mutation-226532,23
@@ -4034,7 +4029,7 @@ Mutation-159253,23
 Mutation-4766569,23
 mantle_cell_lymphoma,5
 Mutation-159252,23
-Epidermal growth factor receptor,2
+Epidermal growth factor receptor,1
 Mutation-397892,23
 Mutation-5041903,23
 Mutation-5336547,27
@@ -4261,7 +4256,7 @@ Mutation-4880467,22
 mENA,1
 Mutation-353176,23
 adnexal_tumour_other,1
-Serine/threonine-protein kinase B-raf,2
+Serine/threonine-protein kinase B-raf,1
 Mutation-3460500,22
 lymphoid_neoplasm_Langerhans_cell_histiocytosis,1
 acute_myeloid_leukaemia_therapy_related,3
@@ -4345,7 +4340,7 @@ Mutation-4993108,24
 Mutation-3834792,22
 Cancer-lymphoid_neoplasm_B_cell_lymphoma_unspecified,23
 Human_EGFR-Kinbase_DFGMotif,1
-ERBB,3
+ERBB,2
 Human_EGFR-Isoform1_F-helix,1
 carcinoma_ductal_carcinoma,8
 Human_EGFR-UniProt_KESaltBridge,1
@@ -4657,7 +4652,7 @@ Mutation-288443,23
 Mutation-94335,26
 Human_LRRK2-Kinbase_C-lobe,1
 Mutation-94336,23
-Human_BRAF,54781
+Human_BRAF,54776
 Mutation-1135092,35
 Mutation-1135096,23
 B-raf 1,1
@@ -4752,7 +4747,7 @@ Human_BRAF-UniProt_glycine-richloop,1
 Human_EPHB1-Cosmic_subdomainV,1
 nodular,3
 Human_EPHB1-Cosmic_RegulatorySpineShell,1
-IRR,4
+IRR,3
 Post NMDA receptor activation events,1
 Human_EPHB1-Cosmic_subdomainI,1
 Human_FLT3-Cosmic_beta5-glutamate,1
@@ -4781,7 +4776,6 @@ Mutation-5271797,22
 Mutation-4773811,23
 Reaction-5682018,1
 Mutation-5030958,26
-"Serine/threonine protein kinase which activates checkpoint signaling upon double strand breaks (DSBs),1
 Mutation-4826859,22
 lymphoid_neoplasm_plasma_cell_myeloma,6
 Mutation-324771,23
@@ -4890,7 +4884,6 @@ Mutation-1251361,23
 Cancer-malignant_melanoma_mixed,10
 Mutation-1251375,23
 Mutation-1251376,23
-"Receptor tyrosine kinase binding ligands of the EGF family and activating several signaling cascades to convert extracellular cues into appropriate cellular responses. Known ligands include EGF,1
 Mutation-5135205,22
 Mutation-1451600,40
 Human_FLT3-UniProt_C-lobe,1
@@ -5079,7 +5072,7 @@ Mutation-4017654,22
 Mutation-4017653,22
 Mutation-4386691,23
 Mutation-4945380,22
-Human_FLT3,30388
+Human_FLT3,30382
 Human_FLT3-Isoform1_D-helix,1
 Mutation-4017650,22
 Human_EGFR-UniProt_C-spineC8,1
@@ -5364,7 +5357,7 @@ Ephrin_lbd,1
 Mutation-1698689,24
 Human_LRRK2-Kinbase_Seq,75
 MGC126806,1
-ERBB1,3
+ERBB1,2
 Reaction-1251944,1
 Mutation-347397,23
 Human_LRRK2-Cosmic_subdomainVIII,1
@@ -5929,7 +5922,6 @@ Human_IRR-UniProt_F-helix,1
 Mutation-13553,28
 Mutation-13552,27
 junctional,1
-"Positively regulates autophagy through a calcium-dependent activation of the CaMKK/AMPK signaling pathway. The process involves activation of nicotinic acid adenine dinucleotide phosphate (NAADP) receptors,1
 DeletionInframe,109
 hyperplasia,2
 Mutation-4642730,24
@@ -6020,7 +6012,7 @@ Reaction-210274,1
 carcinoma_serrated_carcinoma,1
 Human_BRAF-Cosmic_C-spineC1,1
 Reaction-210273,1
-Human_DNAPK,11570
+Human_DNAPK,11565
 Reaction-1295632,1
 Mutation-4767578,25
 Mutation-1536343,22
@@ -6132,7 +6124,6 @@ Mutation-5186583,22
 Mutation-161098,29
 Mutation-33964,28
 Mutation-144576,31
-PARK8,1
 primitive_neuroectodermal_tumour-medulloblastoma,6
 Mutation-1472775,27
 Mutation-1472776,26
@@ -6329,8 +6320,8 @@ Mutation-20620,31
 Mutation-3356156,22
 NK-T_cell_lymphoma,2
 Mutation-304070,23
-RAFB1,3
 Mutation-5024937,23
+RAFB1,2
 Mutation-5024938,23
 Human_FLT3-Cosmic_linker,1
 Mutation-1658869,23
@@ -6589,7 +6580,7 @@ Mutation-36105,31
 Mutation-3666848,24
 Mutation-36104,30
 Human_EPHB1-Kinbase_F-helix,1
-Human_EGFR,55473
+Human_EGFR,55467
 Mutation-1038748,23
 Mutation-1038747,31
 Mutation-4385977,27
@@ -7042,7 +7033,7 @@ Mutation-267979,23
 lymphoid_neoplasm_mixed_Langerhans_cell_histiocytosis-juvenile_xanthogranuloma,1
 Cancer-osteosarcoma_telangiectatic,10
 Mutation-3729043,23
-Serine-protein kinase ATM,2
+Serine-protein kinase ATM,1
 Cancer-malignant_melanoma_of_soft_parts-clear_cell_sarcoma_NS,20
 Mutation-4965487,22
 Mutation-550912,25
@@ -7435,7 +7426,7 @@ Mutation-4041634,22
 Mutation-5181531,22
 Mutation-5181532,22
 Mutation-4041630,22
-NET,3
+NET,2
 Mutation-20404,36
 Mutation-5340492,22
 Mutation-5340491,22
@@ -7598,7 +7589,7 @@ Mutation-1742823,23
 Mutation-1742825,23
 Mutation-1742824,23
 Mutation-1191762,23
-INSRR,3
+INSRR,2
 Mutation-1205054,24
 epithelial,6
 Cancer-malignant_melanoma_vertical_growth_phase,19
@@ -7886,7 +7877,7 @@ Mutation-242476,24
 Mutation-242475,23
 Mutation-35420,23
 Mutation-327924,24
-Human_LRRK2,10534
+Human_LRRK2,10530
 Mutation-2070182,24
 Mutation-2070183,24
 Mutation-793,29
@@ -7919,7 +7910,7 @@ Human_DNAPK-Cosmic_Seq,2
 Signalling to ERKs,1
 Mutation-5006743,23
 Mutation-5006742,23
-EGFR,4
+EGFR,3
 Human_BRAF-ModifiedResidue-14,7
 Mutation-3383183,22
 Mutation-3383182,22
@@ -7935,7 +7926,7 @@ Mutation-4553607,24
 Mutation-4553608,24
 Mutation-1684688,34
 Mutation-4497881,24
-Human_IRR,11950
+Human_IRR,11946
 Mutation-5066422,22
 Mutation-3383179,22
 Mutation-3383178,22
@@ -8683,7 +8674,7 @@ Human_EGFR-Kinbase_subdomainV,1
 Mutation-3881812,22
 Mutation-5273336,22
 Mutation-5273337,22
-Ephrin type-B receptor 1,2
+Ephrin type-B receptor 1,1
 Mutation-3881810,22
 Mutation-216263,23
 Human_IRR-Kinbase_activationsegment,1
@@ -9103,7 +9094,7 @@ Mutation-939047,26
 Mutation-25873,36
 Mutation-939043,23
 Mutation-939041,23
-FLK2,3
+FLK2,2
 Cancer-adrenal_cortical_adenoma_cortisol_producing,10
 DAP12 signaling,1
 Mutation-1235366,36
@@ -9148,7 +9139,6 @@ Mutation-1194331,26
 Mutation-939025,23
 Mutation-939023,23
 Mutation-939021,23
-label,64
 Cancer-benign_melanocytic_nevus_blue,10
 Cancer-carcinoma_HER-positive_carcinoma,22
 Mutation-4884832,22
@@ -9247,13 +9237,12 @@ Mutation-4990074,24
 Mutation-4990073,24
 Mutation-4990072,24
 Mutation-4990071,24
-FLT3,4
+FLT3,3
 Human_IRR-Cosmic_alphaHI-arginine,1
 Mutation-5146870,22
 Mutation-4990070,24
 Reaction-1977958,1
 Mutation-4540587,24
-LRRK2,1
 Reaction-1977959,1
 Mutation-5019881,23
 Human_LRRK2-Kinbase_N-lobe,1
@@ -9775,7 +9764,7 @@ Mutation-1742333,23
 Path-112316,5
 Mutation-1139601,22
 Mutation-1139600,42
-BRAF,4
+BRAF,3
 Mutation-29298,27
 Human_EGFR-Isoform1_gatekeeper,1
 InsertionInframe,435
@@ -10071,7 +10060,6 @@ Mutation-4622165,24
 Mutation-4622166,24
 p53-Dependent G1 DNA Damage Response,1
 Human_FLT3-Isoform2_R-spineShellSh3,1
-"Protein kinase involved in the transduction of mitogenic signals from the cell membrane to the nucleus. May play a role in the postsynaptic responses of hippocampal neuron. Phosphorylates MAP2K1,1
 Human_FLT3-Isoform2_R-spineShellSh1,1
 110,10
 111,2
@@ -10147,7 +10135,6 @@ Mutation-1213976,23
 Mutation-5196989,22
 140,6
 Mutation-5196988,22
-"Serine/threonine-protein kinase that acts as a molecular sensor for DNA damage. Involved in DNA non-homologous end joining (NHEJ) required for double-strand break (DSB) repair and V(D)J recombination. Must be bound to DNA to express its catalytic properties. Promotes processing of hairpin DNA structures in V(D)J recombination by activation of the hairpin endonuclease artemis (DCLRE1C). The assembly of the DNA-PK complex at DNA ends is also required for the NHEJ ligation step. Required to protect and align broken ends of DNA. May also act as a scaffold protein to aid the localization of DNA repair proteins to the site of damage. Found at the ends of chromosomes,1
 141,10
 ATA,1
 142,8
@@ -10167,7 +10154,7 @@ Mutation-1213974,27
 Mutation-1213972,27
 Mutation-3862997,22
 Mutation-3862998,22
-ATM,4
+ATM,3
 Mutation-36383,31
 Mutation-3862999,29
 150,6
@@ -10270,7 +10257,7 @@ Mutation-19870,29
 Mutation-249889,30
 Human_IRR-Kinbase_I-helix,1
 normal,1
-Insulin receptor-related protein,2
+Insulin receptor-related protein,1
 N6-acetyllysine,11
 Mutation-4799662,24
 pulmonary_blastoma_NS,3
@@ -10359,7 +10346,7 @@ Human_BRAF-Cosmic_D-helix,1
 Developmental Biology,1
 Human_IRR-Kinbase_E-helix,1
 Mutation-5023008,23
-STK1,3
+STK1,2
 Mutation-3734766,23
 Human_EGFR-Isoform1_beta4strand,1
 Mutation-4615016,24
