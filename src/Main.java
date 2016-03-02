@@ -170,6 +170,8 @@ public class Main {
 	ArrayList<String> path = new ArrayList<String>();
 	path.add(search[0]);
 	String start = search[0];
+	//for (String str: search) System.out.print(str + " , ");
+	//System.out.println();
 	for (int i = 0; i < search.length-1; ++i) {
 	    //System.out.println(start);
 	    ArrayList<String> temp = new ArrayList<String>();
@@ -195,11 +197,13 @@ public class Main {
     private static ArrayList<String> bfs_aux(HashMap<String, Node> graph, String start, String target, boolean nameSearch) {
 	Queue<Node> q = new LinkedList<Node>();
 	ArrayList<Node> visited = new ArrayList<Node>();
+	//System.out.println("start: " + start + " = " + graph.containsKey(start) + " , target: " + target + " = " + graph.containsKey(target));
 	q.add(graph.get(start));
 	boolean found = false;
 	String goal = new String();
 	while (!q.isEmpty()) {
 	    Node temp = q.poll();
+	    //System.out.println("curr: " + temp.name + " , target: " + target + " , start: " + start);
 	    if (nameSearch) {
 		//System.out.println("N Goal Check - " + temp.name);
 		if (temp.name.equals(target)) {
@@ -360,7 +364,7 @@ public class Main {
 	    HashMap<String, Long> edges = new HashMap<String, Long>();
 	    for (int i = 0; i < GENE_LIST.size(); ++i) types.put(GENE_LIST.get(i), "Gene");
 	    while ((line = bufferedReader.readLine()) != null) {
-		
+		boolean print = false;
 		String[] temp = line.split(",");
 		//System.out.println(temp.length);
 		//if (temp.length < 5) for (int i = 0; i < temp.length; ++i) System.out.println(temp[i]);
@@ -369,13 +373,24 @@ public class Main {
 		    if (temp[i].contains("#")) {
 			temp[i] = temp[i].split("#")[1];
 		    }//if
+		    temp[i] = temp[i].replace("\"", "");
 		}//for
+		if (temp[1].isEmpty() || temp[3].isEmpty()) {
+		    //System.out.println(line);
+		    continue;
+		}//if
 		if (temp[1].equals("comment") || temp[0].equals("label") || temp[2].equals("label") || temp[0].equals("comment") || temp[2].equals("comment")) continue;
 		if (!REMOVE.contains(temp[1])) {
 		    if (temp[1].equals("type")) {
 			types.put(temp[0], temp[2]);
 		    }//if
 		    else {
+			if (line.contains("ModifiedResidueType")) {
+			    //System.out.println(line);
+			    //for (String str: temp) System.out.print(str + " , ");
+			    //System.out.print('\n');
+			    //print = true;
+			}//if
 			String edge = temp[0] + ',' + temp[1] + ',' + temp[2];
 			if (degrees.get(temp[0]) == null) degrees.put(temp[0], (long)1);
 			else degrees.put(temp[0], degrees.get(temp[0]).longValue()+(long)1);
@@ -414,6 +429,7 @@ public class Main {
 			}//else
 		    }//if
 		}//if
+		//if (print) System.out.println(s);
 		if (!s.isEmpty()) bw.write(s);
 		//System.out.println(s  + "\n");
 	    }//while
@@ -515,6 +531,7 @@ public class Main {
 		    if (types.containsKey(temp[2])) s += types.get(temp[2]) + ',';
 		    else s += temp[1].replace("has", "") +',';
 		    s += degrees.get(temp[2]).toString() + '\n';
+		    //if (s.contains("ModifiedResidueType")) System.out.println(s);
 		    bw2.write(s);
 		}//if
 	    }//while
