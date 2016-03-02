@@ -1,0 +1,109 @@
+[ {
+  "name" : "Cancer to Gene",
+  "transformers" : [ {
+    "id" : "org.cytoscape.CompositeFilter",
+    "parameters" : {
+      "type" : "ANY"
+    },
+    "transformers" : [ {
+      "id" : "org.cytoscape.ColumnFilter",
+      "parameters" : {
+        "predicate" : "CONTAINS",
+        "criterion" : "Gene",
+        "caseSensitive" : false,
+        "type" : "nodes",
+        "columnName" : "attribute"
+      }
+    }, {
+      "id" : "org.cytoscape.ColumnFilter",
+      "parameters" : {
+        "predicate" : "CONTAINS",
+        "criterion" : "Cancer",
+        "caseSensitive" : false,
+        "type" : "nodes",
+        "columnName" : "attribute"
+      }
+    }, {
+      "id" : "org.cytoscape.ColumnFilter",
+      "parameters" : {
+        "predicate" : "CONTAINS",
+        "criterion" : "associated",
+        "caseSensitive" : false,
+        "type" : "edges",
+        "columnName" : "interaction"
+      }
+    } ]
+  } ]
+}, {
+  "name" : "Gene to Mutations",
+  "transformers" : [ {
+    "id" : "org.cytoscape.CompositeFilter",
+    "parameters" : {
+      "type" : "ANY"
+    },
+    "transformers" : [ {
+      "id" : "org.cytoscape.ColumnFilter",
+      "parameters" : {
+        "predicate" : "CONTAINS",
+        "criterion" : "Gene",
+        "caseSensitive" : false,
+        "type" : "nodes",
+        "columnName" : "attribute"
+      }
+    }, {
+      "id" : "org.cytoscape.ColumnFilter",
+      "parameters" : {
+        "predicate" : "CONTAINS",
+        "criterion" : "Missense",
+        "caseSensitive" : false,
+        "type" : "nodes",
+        "columnName" : "attribute"
+      }
+    }, {
+      "id" : "org.cytoscape.ColumnFilter",
+      "parameters" : {
+        "predicate" : "CONTAINS",
+        "criterion" : "Coding",
+        "caseSensitive" : false,
+        "type" : "nodes",
+        "columnName" : "attribute"
+      }
+    }, {
+      "id" : "org.cytoscape.ColumnFilter",
+      "parameters" : {
+        "predicate" : "CONTAINS",
+        "criterion" : "Insertion",
+        "caseSensitive" : false,
+        "type" : "nodes",
+        "columnName" : "attribute"
+      }
+    }, {
+      "id" : "org.cytoscape.ColumnFilter",
+      "parameters" : {
+        "predicate" : "CONTAINS",
+        "criterion" : "Deletion",
+        "caseSensitive" : false,
+        "type" : "nodes",
+        "columnName" : "attribute"
+      }
+    }, {
+      "id" : "org.cytoscape.ColumnFilter",
+      "parameters" : {
+        "predicate" : "CONTAINS",
+        "criterion" : "Substitution",
+        "caseSensitive" : false,
+        "type" : "nodes",
+        "columnName" : "attribute"
+      }
+    }, {
+      "id" : "org.cytoscape.ColumnFilter",
+      "parameters" : {
+        "predicate" : "IS",
+        "criterion" : "hasMutation",
+        "caseSensitive" : false,
+        "type" : "edges",
+        "columnName" : "interaction"
+      }
+    } ]
+  } ]
+} ]
